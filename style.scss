@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-white: #fff;
+    --color-black: #000;
+    --yellow : #fca311;
+    --gray-color : #343a40;
+}
+@mixin flex($align, $direction , $gap) {
+    display: flex;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin font($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: var(--gray-color);
+    @include flex(center, column , 1rem );
+    justify-content: center;
+    padding: 2rem 7rem;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.program{
+    @include flex(center, column, 1rem);
+    // width: 100%;
+    // margin: auto;
+    background-color: var(--color-black);
+    padding: 2rem;
+    border: none;
+    width: 500px;
+    .input{
+        position: relative;
+        
+        input{
+            width: 450px;
+            border: none;
+            outline: none;
+            padding: 1rem;
+            background-color: var(--gray-color);
+            border-radius: 0.5rem;
+            @include font(1.3rem,500 ,var(--color-white));
+        }
+        i{
+            cursor: pointer;
+            @include font(1.3rem,500 ,var(--yellow));
+            position: absolute;
+            right: 10px;
+            top: 15px;
+        }
+    }
+}
+.bodyProgram{
+    @include flex(start, column, 1rem);
+    background-color: var(--color-black);
+    padding: 2rem;
+    border: none;
+    width: 500px;
+    .length{
+        @include flex(start, column, 1rem);
+        width: 100%;
+        input[type="range"]{
+            width: 100%;
+            -webkit-appearance: none;
+        }
+        input[type="range"]::-webkit-slider-runnable-track{
+            width: 100%;
+            height: .4rem;
+            background-color: var(--yellow);
+            // border-radius: 5px;
+            // box-shadow: 0 0 0.5rem #000 inset;
+        }
+        input[type="range"]::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            // box-shadow: 0 0 0.5rem #000;
+            position: relative;
+            top: -.6rem;
+        }
+
+        .lengthValue{
+            @include flex(center, row, 1rem);
+            justify-content: space-between;
+            width: 100%;
+            .title{
+                @include font(1.3rem,500 ,var(--color-white));
+                text-transform: uppercase
+            }
+            .lengthValuenum{
+                @include font(1.3rem,500 ,var(--yellow));
+            }
+        }
+    }
+    .options{
+        @include flex(start, column, 1rem);
+        .option{
+            @include flex(center, row, 1rem);
+            input[type="checkbox"]{
+                cursor: pointer;
+                accent-color: var(--yellow);
+                width: 50px;
+                height: 20px;
+            }
+            label{
+                @include font(1.3rem,500 , var(--color-white));
+                cursor: pointer;
+                text-transform: capitalize
+            }
+        }
+    }
+    button{
+        width: 100%;
+        padding: 15px;
+        background-color:var(--yellow);
+        border-radius: 5px;
+        @include font(1.2rem, 700 ,var(--color-black) );
+        border: none;
+        outline: none;
+        letter-spacing: 1px;
+    }
+}

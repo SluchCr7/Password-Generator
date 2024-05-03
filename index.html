@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="productivity.png" type="image/x-icon">
+</head>
+<body>
+    <div class="program">
+        <div class="input">
+            <input type="text" readonly id="input" class="input">
+            <i class="fa-solid fa-copy"></i>
+        </div>
+    </div>
+    <div class="bodyProgram">
+        <div class="length">
+            <input type="range" name="" id="length" min="8" max="20" value="8" step="1">
+            <div class="lengthValue">
+                <span class="title">Length</span>
+                <span id="lengthValue" class="lengthValuenum">8</span>
+            </div>
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="checkbox" name="" id="uppercase">
+                <label for="uppercase">include LowerCase</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" name="" id="lowercase">
+                <label for="lowercase">include UpperCase</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" name="" id="numbers">
+                <label for="numbers">include Numbers</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" name="" id="sympols">
+                <label for="sympols">include Sympols</label>
+            </div>
+        </div>
+        <button id="generate">Generate</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

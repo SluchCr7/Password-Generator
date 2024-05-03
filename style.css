@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --yellow: #fca311;
+  --gray-color: #343a40;
+}
+
+body {
+  background-color: var(--gray-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 7rem;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.program {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--color-black);
+  padding: 2rem;
+  border: none;
+  width: 500px;
+}
+.program .input {
+  position: relative;
+}
+.program .input input {
+  width: 450px;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background-color: var(--gray-color);
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+.program .input i {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--yellow);
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.bodyProgram {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--color-black);
+  padding: 2rem;
+  border: none;
+  width: 500px;
+}
+.bodyProgram .length {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.bodyProgram .length input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+}
+.bodyProgram .length input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.4rem;
+  background-color: var(--yellow);
+}
+.bodyProgram .length input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  position: relative;
+  top: -0.6rem;
+}
+.bodyProgram .length .lengthValue {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.bodyProgram .length .lengthValue .title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+.bodyProgram .length .lengthValue .lengthValuenum {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--yellow);
+}
+.bodyProgram .options {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.bodyProgram .options .option {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.bodyProgram .options .option input[type=checkbox] {
+  cursor: pointer;
+  accent-color: var(--yellow);
+  width: 50px;
+  height: 20px;
+}
+.bodyProgram .options .option label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-white);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.bodyProgram button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--yellow);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-black);
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=style.css.map */
